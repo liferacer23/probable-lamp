@@ -162,7 +162,7 @@ export default function Container({ theme, setTheme }) {
         </div>
       </div>
       <div
-        className={`p-4 flex flex-col items-center justify-center${
+        className={`p-4 flex flex-col items-center justify-center ${
           theme === "Dark"
             ? "bg-Dark-keypad"
             : theme === "Light"

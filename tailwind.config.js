@@ -40,7 +40,7 @@ module.exports = {
 
         "Dark-main": "hsl(222, 26%, 31%)",
         "Dark-screen": "hsl(224, 36%, 15%)",
-        "Dark-keypad": "hsl(223, 31%, 20%)",
+        "Dark-keypad": "hsl(224, 36%, 15%)",
         "Dark-toggle-background": "hsl(223, 31%, 20%)",
 
         /////////////////////////////////
