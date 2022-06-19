@@ -11,7 +11,7 @@ export default function Container({ theme, setTheme }) {
   const ops = ["*", "/", ".", "-", "+"];
 
   const update = (value) => {
-    if (value == "0" && calculate == "") {
+    if (value == "0" && calculate == "0") {
       return;
     }
     if (
@@ -31,6 +31,7 @@ export default function Container({ theme, setTheme }) {
       setCalculate(val);
     }
   };
+
   const buttons = [
     "7",
     "8",
@@ -157,8 +158,10 @@ export default function Container({ theme, setTheme }) {
               : ""
           } font-bold `}
         >
-          <div className="flex flex-col ">{result !== "" ? <span className="text-xs">({result})</span> : ""}{" "}
-          &nbsp; {calculate}</div>
+          <div className="flex flex-col ">
+            {result !== "" ? <span className="text-xs">({result})</span> : ""}{" "}
+            &nbsp; {calculate}
+          </div>
         </div>
       </div>
       <div
@@ -196,9 +199,9 @@ export default function Container({ theme, setTheme }) {
                 } font-bold shadow-sm ${
                   theme === "Dark" && item !== "DEL"
                     ? "bg-Dark-gray-key-background shadow-Dark-gray-key-shadow text-Dark-blue-text"
-                    : theme === "Light"
+                    : theme === "Light" && item !== "DEL"
                     ? "bg-Light-gray-key-background shadow-Light-gray-key-shadow text-Light-blue-text"
-                    : theme === "Violette"
+                    : theme === "Violette" && item !== "DEL"
                     ? "bg-Violette-gray-key-background shadow-Violette-gray-key-shadow text-Violette-yellow-text"
                     : ""
                 } cursor-pointer w-[22%] h-[22%] rounded-[0.3rem] flex items-center justify-center`}
