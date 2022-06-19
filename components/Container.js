@@ -158,9 +158,9 @@ export default function Container({ theme, setTheme }) {
               : ""
           } font-bold `}
         >
-          <div className="flex flex-col ">
+          <div className="flex flex-col items-end">
             {result !== "" ? <span className="text-xs">({result})</span> : ""}{" "}
-            &nbsp; {calculate}
+            {calculate}
           </div>
         </div>
       </div>
