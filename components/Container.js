@@ -14,8 +14,8 @@ export default function Container({ theme, setTheme }) {
     if (value == "0" && calculate == "0" || value !=="."  && calculate == "0") {
       return;
     }
-    if (
-      (ops.includes(value) && calculate === "") ||
+    if (value !=="-" &&
+      (ops.includes(value) && calculate === "") || value !=="-" &&
       (ops.includes(value) && ops.includes(calculate.slice(-1)))
     ) {
       return;
