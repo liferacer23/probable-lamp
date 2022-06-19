@@ -11,7 +11,7 @@ export default function Container({ theme, setTheme }) {
   const ops = ["*", "/", ".", "-", "+"];
 
   const update = (value) => {
-    if (value == "0" && calculate == "0") {
+    if (value == "0" && calculate == "0" || value !=="."  && calculate == "0") {
       return;
     }
     if (
